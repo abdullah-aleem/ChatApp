@@ -1,5 +1,12 @@
-import React from 'react';import logo from './logo.svg';import './App.css';import socketClient  from "socket.io-client";
+import React from 'react';import logo from './logo.svg';
+
+import './App.css';
+
+import socketClient  from "socket.io-client";
+
+
 const SERVER = "http://127.0.0.1:8080";
+
 function App() {
   var connectionOptions = {
     "force new connection": true,
@@ -7,11 +14,13 @@ function App() {
     "timeout": 10000,                  //before connect_error and connect_timeout are emitted.
     "transports": ["websocket"]
 };
-  var socket = socketClient (SERVER,connectionOptions);
+
+var socket = socketClient (SERVER,connectionOptions);
     socket.on('connection', () => {
         console.log(`I'm connected with the back-end`);
 });
-    return (
+
+return (
         <div classname="App">
 
             <header classname="App-header"></header>
