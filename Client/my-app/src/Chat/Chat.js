@@ -1,6 +1,6 @@
 import React from 'react';
 import ChannelList from "./ChannelList";
-import './chat.css'
+import './chat.scss'
 import MessagesPannel from './Messagespannel';
 var connectionOptions = {
     "force new connection": true,
@@ -40,7 +40,7 @@ export default class Chat extends React.Component {
         return (
 
             <div>
-                <div className="chast-app"></div>
+                <div className="chat-app"></div>
                 <ChannelList channels={this.state.channels}></ChannelList>
                 <MessagesPannel />
             </div>
